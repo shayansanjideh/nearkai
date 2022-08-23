@@ -1,0 +1,40 @@
+{
+  "version": "1.0.1",
+  "name": "NEARWallet",
+  "description": "A fast way to send and receive NEAR",
+  "type": "privileged",
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/assets/icons/kaiak_56.png",
+    "112": "/assets/icons/kaiak_112.png"
+  },
+  "developer": {
+    "name": "Shayan Sanjideh",
+    "url": "https://github.com/"
+  },
+  "permissions": {
+    "systemXHR": {},
+    "camera": {
+      "description": "Required for scanning QR codes"
+    },
+    "video-capture": {
+      "description": "Required for scanning QR codes"
+    },
+    "mobiledata": {
+      "description": "Required for sending/receiving transactions"
+    },
+    "wifidata": {
+      "description": "Required for sending/receiving transactions"
+    }
+  },
+  "theme_color": "#F4FAFF",
+  "cursor": false,
+  "fullscreen": false,
+  "locales": {
+    "en-US": {
+      "name": "NEARWallet",
+      "subtitle": "A mobile NEAR wallet",
+      "description": "Send money in seconds with NEAR"
+    },
+    "default_locale": "en-US"
+}

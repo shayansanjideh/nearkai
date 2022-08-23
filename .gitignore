@@ -1,0 +1,8 @@
+.cache
+!public/index.html
+node_modules
+dist
+.parcel-cache
+.envrc
+.npmrc
+.DS_Store

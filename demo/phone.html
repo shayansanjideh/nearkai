@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7HZ5EQX6F5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-7HZ5EQX6F5');
+        </script>
+        <meta charset="UTF-8">
+        <title>Kaiak – The lightweight Nano wallet for KaiOS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="Kaiak - Cryptocurrency wallet for the emerging markets">
+        <meta property="og:description" content="The lightweight Nano wallet for KaiOS">
+        <meta property="og:image" content="https://kaiak.cc/facebook_og_image.png">
+        <meta property="og:url" content="https://kaiak.cc">
+        <meta name="twitter:title" content="Kaiak - Cryptocurrency wallet for the emerging markets">
+        <meta name="twitter:description" content="The lightweight Nano wallet for KaiOS">
+        <meta name="twitter:image" content="https://kaiak.cc/facebook_og_image.png">
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="defaultLanguage" content="en-US" />
+        <meta name="availableLanguages" content="en-US, es-US, nl, hi, fa, pt-BR" />
+        <link rel="localization" href="/locales/{locale}.properties" />
+
+        <script defer src='../dist/index.6fa4ea68.js'></script>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+            body {
+                font-family: 'Open Sans', sans-serif;
+                background: #F4FAFF;
+                color: black;
+            }
+            .mobile-layout {
+                width: 50%;
+                margin: 0 auto;
+                position: relative;
+            }
+            .box {
+                width: 17.5rem;
+                height: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+            }
+            .overlay {
+                border-radius: 25px;
+                box-shadow: 10px 5px 5px lightgrey;
+            }
+            .stack-top {
+                width: 15rem;
+                height: 20rem;
+                z-index: 9;
+                margin-top: 3.65rem;
+                margin-left: 1.25rem;
+                border: none;
+            }
+            .small {
+                display: none;
+            }
+            .selling {
+                font-weight: bold;
+            }
+            .donation-img {
+                width: 12.5rem;
+            }
+            .language-control > li:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            .active {
+                font-weight: bold;
+            }
+            #app {
+            }
+            main {
+                height: 100%;
+            }
+            main > div.kui-app {
+                height: 100% !important;
+            }
+            .title {
+                display: flex;
+                flex-direction: column;
+                margin-right: auto;
+            }
+            .title span {
+                font-weight: bold;
+                background: #000034;
+                color: white;
+                padding: 5px;
+                border-radius: 15px;
+                text-align: center;
+            }
+            .title a:visited {
+                color: #F4FAFF;
+            }
+            .title a {
+                color: #F4FAFF;
+            }
+            @media only screen and (max-width: 56.25em) {
+                .section {
+                    flex-direction: column;
+                    padding-left: 1rem;
+                }
+                .mobile-layout {
+                    margin-top: 2rem;
+                }
+                .regular {
+                    display: none;
+                }
+                .small {
+                    display: initial;
+                }
+                .left {
+                    width: 100%;
+                }
+                .right {
+                    width: 100%;
+                }
+            }
+        </style>
+        <script>
+            function setButton(svgElement, keyType) {
+                const svg = document.getElementById('svg').contentDocument;
+                let button = svg.getElementById(svgElement);
+                button.addEventListener('click', ev => {
+                    console.log(keyType);
+                    document.dispatchEvent(new KeyboardEvent('keydown', {key: keyType}));
+                })
+            }
+
+            function wireUpButtons() {
+                setButton('Backspace', 'Backspace')
+                setButton('SoftLeft', 'SoftLeft')
+                setButton('SoftRight', 'SoftRight')
+                setButton('Enter', 'Enter')
+            }
+
+            function setLanguage(element) {
+                const children = document.getElementsByClassName('language-control')[0].children
+                for (let i = 0; i < children.length; i++) {
+                    const child = children[i]
+                    child.classList.remove('active')
+                }
+                navigator.mozL10n.language.code = element.id;
+                element.classList.add('active')
+            }
+        </script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="mobile-layout">
+                <object id="svg" type="image/svg+xml" data="../assets/images/kaiak_device.svg" class="box overlay"  onload="wireUpButtons()" ></object>
+                <div id="root" class="box stack-top"></div>
+                <!-- <div id="app" class="box stack-top"></div> -->
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "featuredMarketIds": [
+    "ft:dev-1644204734689-62535178609234-ft:dev-1643664581517-16738506541621"
+  ],
+  "markets": [
+    {
+      "marketId": "ft:dev-1644204734689-62535178609234-ft:dev-1643664581517-16738506541621",
+      "quoteToken": {
+        "id": "ft:dev-1644204734689-62535178609234",
+        "metadata": {
+          "icon": "https://picsum.photos/150/150",
+          "name": "Tonic Dev Token",
+          "symbol": "DEV"
+        }
+      },
+      "baseToken": {
+        "id": "ft:dev-1643664581517-16738506541621",
+        "metadata": {
+          "icon": "https://picsum.photos/150/150",
+          "name": "Tonic Test Quote Token",
+          "symbol": "QUOTE"
+        }
+      }
+    }
+  ]
+}
