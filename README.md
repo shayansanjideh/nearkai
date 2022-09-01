@@ -20,6 +20,18 @@ yarn
 yarn dev
 ```
 
+In another terminal run:
+
+```
+python -m http.server 4000
+```
+
+And enter this URL in your browser:
+
+```
+localhost:4000/demo/phone.html
+```
+
 The stack is react+parcel with
 
 - [twin.macro](https://github.com/ben-rogerson/twin.macro) for styles
